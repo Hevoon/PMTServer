@@ -1,0 +1,8 @@
+node_modules/ 
+dist/
+.idea/
+logs/
+test/
+test.css
+test.json
+test.png
