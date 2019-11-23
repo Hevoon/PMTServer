@@ -3,7 +3,7 @@ let Sequelize = require('sequelize');
 
 let Init = db.defineModel('uv', {
     appId: Sequelize.STRING,
-    url: Sequelize.STRING,
+    siteName: Sequelize.STRING,
     time: Sequelize.DATE
 }, {
     timestamps: false,

@@ -1,4 +1,4 @@
-let producer = require('../../rabbitmq/producer');
+let producer = require('../../../rabbitmq/producer');
 module.exports = async (ctx, next) => {
     let name = 'http'
     let message = {
@@ -11,6 +11,7 @@ module.exports = async (ctx, next) => {
         timeStart: ctx.request.body.timeStart,
         currentTime: ctx.request.body.currentTime,
         loadTime: ctx.request.body.loadTime,
+        siteName: ctx.request.body.name,
     }
     producer(name, message)
     ctx.response.state = 200

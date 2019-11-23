@@ -1,4 +1,4 @@
-let db = require('../db');
+let db= require('../db');
 let Sequelize = require('sequelize');
 
 let httpMonitor = db.defineModel('httpmonitor', {
@@ -11,7 +11,8 @@ let httpMonitor = db.defineModel('httpmonitor', {
     timeStart: Sequelize.STRING,
     currentTime: Sequelize.STRING,
     loadTime: Sequelize.INTEGER,
-    time: Sequelize.DATE
+    time: Sequelize.DATE,
+    siteName: Sequelize.STRING,
 }, {
     timestamps: false,
     freezeTableName: true

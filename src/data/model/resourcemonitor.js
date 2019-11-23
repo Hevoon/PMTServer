@@ -6,7 +6,8 @@ let httpMonitor = db.defineModel('resourcemonitor', {
     resourceUrl: Sequelize.STRING,
     initiatorType: Sequelize.STRING,
     duration: Sequelize.DOUBLE,
-    time: Sequelize.DATE
+    time: Sequelize.DATE,
+    siteName: Sequelize.STRING,
 }, {
     timestamps: false,
     freezeTableName: true

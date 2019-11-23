@@ -1,4 +1,4 @@
-let producer = require('../../../rabbitmq/producer');
+let producer = require('../../../../rabbitmq/producer');
 module.exports = async (ctx, next) => {
     let name = 'pagetarget'
     let message = {
@@ -8,6 +8,7 @@ module.exports = async (ctx, next) => {
         domTreeCons: ctx.request.body.domTreeCons,
         sourceLoad: ctx.request.body.sourceLoad,
         url: ctx.request.body.url,
+        siteName: ctx.request.body.name,
     }
     producer(name, message)
     ctx.response.state = 200

@@ -1,5 +1,5 @@
 let moment = require('moment');
-const errorMonitor = require('../../data/model/errormonitor');
+const errorMonitor = require('../../../data/model/errormonitor');
 
 module.exports = async function (e) {
     if (e.isVue) {
@@ -12,6 +12,7 @@ module.exports = async function (e) {
             detailType: e.detailType,
             component: e.component,
             isVue: true,
+            siteName: e.siteName,
             time: moment().format('YYYY-MM-DD HH:mm:ss')
         }).catch((e) => {
             console.log('error is happen at pagetarget consumer', e)
@@ -25,6 +26,7 @@ module.exports = async function (e) {
             lineno: e.lineno,
             colon: e.colon,
             isVue: false,
+            siteName: e.siteName,
             time: moment().format('YYYY-MM-DD HH:mm:ss')
         }).catch((e) => {
             console.log('error is happen at pagetarget consumer', e)

@@ -11,5 +11,5 @@ function defineModel(name, attributes, attr) {
     return seq.define(name, attributes, attr);
 }
 
-
 exports.defineModel = defineModel;
+exports.seq = seq;

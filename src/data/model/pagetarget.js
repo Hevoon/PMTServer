@@ -8,7 +8,8 @@ let httpMonitor = db.defineModel('pagetarget', {
     domTreeCons: Sequelize.INTEGER,
     sourceLoad: Sequelize.INTEGER,
     url: Sequelize.STRING,
-    time: Sequelize.DATE
+    time: Sequelize.DATE,
+    siteName: Sequelize.STRING,
 }, {
     timestamps: false,
     freezeTableName: true

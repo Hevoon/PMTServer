@@ -1,4 +1,4 @@
-let producer = require('../../rabbitmq/producer');
+let producer = require('../../../rabbitmq/producer');
 module.exports = async (ctx, next) => {
     let name = 'error'
     let message = {
@@ -10,7 +10,8 @@ module.exports = async (ctx, next) => {
         lineno: ctx.request.body.lineno,
         colon: ctx.request.body.colon,
         component: ctx.request.body.component,
-        isVue: ctx.request.body.isVue
+        isVue: ctx.request.body.isVue,
+        siteName: ctx.request.body.name,
     }
     producer(name, message)
     ctx.response.state = 200

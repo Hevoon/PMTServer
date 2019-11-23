@@ -1,5 +1,5 @@
 let moment = require('moment');
-const init = require('../../data/model/init');
+const init = require('../../../data/model/init');
 module.exports = async (ctx, next) => {
     //设定为每日的23:59:59过期
     let endDate = moment().endOf("day").format('YYYY-MM-DD HH:mm:ss')
@@ -17,6 +17,7 @@ module.exports = async (ctx, next) => {
                 await init.create({
                     appId: Id,
                     url: ctx.query.url,
+                    siteName: ctx.query.name,
                     time: moment().format('YYYY-MM-DD')
                 })
             }

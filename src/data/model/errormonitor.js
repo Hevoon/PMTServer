@@ -11,7 +11,8 @@ let errorMonitor = db.defineModel('errormonitor', {
     colon: Sequelize.INTEGER,
     component: Sequelize.STRING,
     isVue: Sequelize.BOOLEAN,
-    time: Sequelize.DATE
+    time: Sequelize.DATE,
+    siteName: Sequelize.STRING,
 }, {
     timestamps: false,
     freezeTableName: true
