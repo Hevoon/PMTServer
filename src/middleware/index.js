@@ -6,7 +6,7 @@ const cors = require('koa2-cors');
 
 module.exports = (app) => {
     app.use(myDone())
-    app.use(statics('.'))
+    // app.use(statics('.'))
     // cookies签名
     // app.key = ['hevoon', 'happy every day']
     // 跨域设置
