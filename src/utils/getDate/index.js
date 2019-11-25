@@ -50,32 +50,3 @@ module.exports = {
     httpDate,
     pageDate
 }
-// let moment = require('moment')
-// module.exports = async function (arr1, arr2) {
-//     let date = moment().format("YYYYMMDD")
-//     let list = new Array(10).fill(0)
-//     list.map((e,index) => {
-//         e={sd}
-//     })
-//     await arr1.map(e => {
-//         let _t = parseInt(e.times)
-//         if (_t <= date && _t > date - 10) {
-//             let i = _t + 9 - date
-//             e.pv = 0
-//             list[i] = e
-//         }
-//     })
-//     await arr2.map(e => {
-//         let _t = parseInt(e.times)
-//         if (_t <= date && _t > date - 10) {
-//             let i = _t + 9 - date
-//             if (list[i] !== 0) {
-//                 list[i].pv = e.pv
-//             } else {
-//                 e.uv = 0
-//                 list[i] = e
-//             }
-//         }
-//     })
-//     return list
-// }

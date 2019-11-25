@@ -2,7 +2,7 @@ const Sequelize = require('sequelize')
 const db = require('../../../data/db')
 let getSiteList = require('../../../utils/getSiteList')
 let createList = require('./createList.js')
-// let getFailMessage = require('./getFailMessage.js')
+
 
 module.exports = async (ctx, next) => {
     let siteList = await getSiteList()
